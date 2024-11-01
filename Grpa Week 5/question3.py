@@ -35,7 +35,7 @@ def is_valid_coordinate(x:int,y:int, M):
 
 def valid_adjacent_coordinates(x:int,y:int, M):
     '''Create a set of valid adjacent coordinates(indices) given x,y and a matrix M'''
-    return {(x1, y1) for x1, y1 in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)] if is_valid_coordinate(x1,y1, M)} # all the possible adjacent coordinates
+    return [(x1, y1) for x1, y1 in [(x - 1, y), (x + 1, y), (x, y - 1), (x, y + 1)] if is_valid_coordinate(x1,y1, M)} # all the possible adjacent coordinates
 
 def next_coordinate_with_value(curr_coords, value, M, prev_coords=None):
     '''Find the coordinate(indices) of the next coordinate that has the value in it. For the starting coordinate the prev_coords would be None'''
